@@ -4,5 +4,5 @@
   --color-surface:#ffffff00; --color-on-surface:#3C2F2F;
   --color-accent:#CDA434; --color-accent-muted:#FFE9A6;
 }
-body{ background:var(--color-surface); color:var(--color-on-surface); font-size:16px; line-height:1.6; }
+html, body{ background:var(--color-surface); color:var(--color-on-surface); font-size:16px; line-height:1.6; }
 .container{ max-width:80rem; margin-inline:auto; padding-inline:1rem; }

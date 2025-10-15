@@ -4,13 +4,25 @@
 import { useState } from "react";
 import Placeholder from "./_Placeholder";
 
-const TABS = ["Semua", "Mingguan", "Bulanan", "Tahunan", "Anak Muda", "Orang Tua"];
+const TABS = [
+  "Semua",
+  "Mingguan",
+  "Bulanan",
+  "Tahunan",
+  "Anak Muda",
+  "Orang Tua",
+];
 
 const DESTS = [
   { id: "1", title: "Kebaktian Mingguan", Panitia: "Budi", tag: "Tahunan" },
   { id: "2", title: "Kebaktian Bulanan", Panitia: "Budi", tag: "Bulanan" },
   { id: "3", title: "Kebaktian Bulanan", Panitia: "Turkey", tag: "Bulanan" },
-  { id: "4", title: "Kebaktian Anak Remaja", Panitia: "Australia", tag: "Anak Muda" },
+  {
+    id: "4",
+    title: "Kebaktian Anak Remaja",
+    Panitia: "Australia",
+    tag: "Anak Muda",
+  },
 ];
 
 export default function Acara() {
@@ -23,7 +35,9 @@ export default function Acara() {
     <section className="py-10">
       <div className="container mx-auto px-4">
         <div className="mb-4 flex items-center justify-between">
-          <h2 className="text-2xl font-semibold tracking-tight">Update Acara</h2>
+          <h2 className="text-2xl font-semibold tracking-tight">
+            Update Acara
+          </h2>
           <button className="hidden md:inline-flex items-center rounded-full border border-zinc-300 px-3 py-1.5 text-sm hover:bg-zinc-50">
             Ikuti semua acara
           </button>
@@ -61,7 +75,7 @@ export default function Acara() {
                 </div>
                 <div className="mt-3">
                   <h3 className="font-medium leading-tight">{d.title}</h3>
-                  <p className="text-sm text-zinc-600">{d.Bhante}</p>
+                  <p className="text-sm text-zinc-600">{d.Panitia}</p>
                 </div>
               </div>
             </article>
