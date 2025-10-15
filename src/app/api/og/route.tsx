@@ -1,15 +1,32 @@
-import { ImageResponse } from "next/og";
+// src/app/api/og/route.tsx
+import { ImageResponse } from 'next/og';
 
-export const runtime = 'edge';
-export const alt = 'Chatra Dhammapanno';
-export const size = { width: 1200, height: 630 };
-export const contentType = 'image/png';
+export const runtime = 'edge';             
+export const dynamic = 'force-dynamic';    
 
-export default async function OG() {
+export async function GET(req: Request) {
+  const { searchParams } = new URL(req.url);
+  const title = searchParams.get('title') ?? 'Chatra Dhammapanno';
+
   return new ImageResponse(
-    (<div style={{height:"100%",width:"100%",display:"flex",alignItems:"center",justifyContent:"center",background:"#FFF9F1",color:"#3C2F2F",fontSize:64,fontFamily:"serif"}}>
-      Chatra Dhammapanno
-    </div>),
-    { ...size }
+    (
+      <div
+        style={{
+          width: '1200px',
+          height: '630px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          fontSize: 72,
+          fontWeight: 700,
+          background: '#f5f4ef',
+          color: '#18181b',
+          padding: '48px',
+        }}
+      >
+        {title}
+      </div>
+    ),
+    { width: 1200, height: 630 }
   );
 }
