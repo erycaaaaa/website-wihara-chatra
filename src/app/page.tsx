@@ -1,7 +1,7 @@
 // app/layout.tsx
 import "./globals.css";
 import type { Metadata } from "next";
-
+import beranda from "./beranda/page";
 export const metadata: Metadata = {
   title: "Chatra Dhammapanno",
   description:
@@ -37,6 +37,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main>
+      {beranda()}
     </main>
   );
 }
