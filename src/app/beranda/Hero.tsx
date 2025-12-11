@@ -7,16 +7,16 @@ const asset = (p: string) => `${BASE}${p.startsWith("/") ? p : `/${p}`}`;
 // ====================================================================
 const BG_SRC = asset("/vl1.png");
 const photos = [
-  { src: asset("/vl1.png"), alt: "Galeri 1" },
-  { src: asset("/vl3.png"), alt: "Galeri 2" },
-  { src: asset("/vp1.jpg"), alt: "Galeri 3" },
-  { src: asset("/vp3.png"), alt: "Galeri 4" },
+  { src: asset("/vl2.png"), alt: "Galeri 1" },
+  { src: asset("/vl4.png"), alt: "Galeri 2" },
+  { src: asset("/vp4.jpeg"), alt: "Galeri 3" },
+  { src: asset("/vp2.png"), alt: "Galeri 4" },
 ];
 
 function GalleryGrid() {
   return (
     <div className="grid grid-cols-2 gap-4">
-      <div className="rounded-2xl bg-zinc-100/70 p-2 backdrop-blur-sm">
+      <div className="rounded-2xl bg-zinc-100/70 p-2 md:mt-5 mt-0 backdrop-blur-sm">
         <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
           <Image
             src={photos[0].src}
@@ -28,7 +28,7 @@ function GalleryGrid() {
           />
         </div>
       </div>
-      <div className="rounded-2xl bg-zinc-100/70 p-2 md:mt-8 mt-0 backdrop-blur-sm">
+      <div className="rounded-2xl bg-zinc-100/70 p-2 md:mt-5 mt-0backdrop-blur-sm">
         <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
           <Image
             src={photos[1].src}
@@ -39,7 +39,7 @@ function GalleryGrid() {
           />
         </div>
       </div>
-      <div className="rounded-2xl bg-zinc-100/70 p-2 md:-mt-8 mt-0 backdrop-blur-sm">
+      <div className="rounded-2xl bg-zinc-100/70 p-2 md:mt-5 mt-0 backdrop-blur-sm">
         <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
           <Image
             src={photos[2].src}
@@ -50,7 +50,7 @@ function GalleryGrid() {
           />
         </div>
       </div>
-      <div className="rounded-2xl bg-zinc-100/70 p-2 backdrop-blur-sm">
+      <div className="rounded-2xl bg-zinc-100/70 p-2 md:mt-5 mt-0 backdrop-blur-sm">
         <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
           <Image
             src={photos[3].src}
